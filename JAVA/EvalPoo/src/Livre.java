@@ -1,5 +1,5 @@
 
-public class Livre {
+public class Livre implements Empruntable {
 	public String titre;
 	public String auteur;
 	public String isbn;
@@ -19,6 +19,14 @@ public class Livre {
 		System.out.println("disponible : " + this.disponible);
 	}
 
+	public void emprunter() {
+		this.disponible = false;
+	}
+
+	public void retourner() {
+		this.disponible = true;
+	}
+	
 	public String getTitre() {
 		return titre;
 	}
@@ -50,6 +58,8 @@ public class Livre {
 	public void setDisponible(boolean disponible) {
 		this.disponible = disponible;
 	}
+
+	
 	
 	
 	
