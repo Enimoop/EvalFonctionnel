@@ -3,16 +3,15 @@ abstract public class Personne {
 	protected String nom;
 	protected String prenom;
 	protected int id;
-	
-	public Personne(String nom,String prenom, int id) {
+
+	public Personne(String nom, String prenom, int id) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.id = id;
 	}
-	
-	
+
 	abstract public void afficherDetails();
-	
+
 	public String getNom() {
 		return this.nom;
 	}
@@ -36,6 +35,5 @@ abstract public class Personne {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-	
+
 }

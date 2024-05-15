@@ -1,17 +1,17 @@
 
 public class Employe extends Personne {
-	
+
 	private String poste;
 	private double salaire;
-	
+
 	public Employe(String nom, String prenom, int id, String poste, double salaire) {
 		super(nom, prenom, id);
 		this.poste = poste;
 		this.salaire = salaire;
 	}
 
-
 	public void afficherDetails() {
+		System.out.println("Détail d'un employé");
 		System.out.println("nom : " + this.nom);
 		System.out.println("prenom : " + this.prenom);
 		System.out.println("id : " + this.id);
@@ -35,6 +35,5 @@ public class Employe extends Personne {
 	public void setSalaire(double salaire) {
 		this.salaire = salaire;
 	}
-	
-	
+
 }

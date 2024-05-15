@@ -4,15 +4,16 @@ public class Livre implements Empruntable {
 	private String auteur;
 	private String isbn;
 	private boolean disponible;
-	
+
 	public Livre(String titre, String auteur, String isbn, boolean disponible) {
 		this.titre = titre;
 		this.auteur = auteur;
 		this.isbn = isbn;
 		this.disponible = disponible;
 	}
-	
+
 	public void afficherDetails() {
+		System.out.println("Détails du livre :");
 		System.out.println("Titre : " + this.titre);
 		System.out.println("Auteur : " + this.auteur);
 		System.out.println("isbn : " + this.isbn);
@@ -20,16 +21,20 @@ public class Livre implements Empruntable {
 		System.out.println();
 	}
 
-	public void emprunter() {
-		System.out.println("Vous avez emprunté le livre " + this.titre);
-		this.disponible = false;
+	public boolean emprunter() {
+		if (this.disponible == false) {
+		System.out.println("Le livre est déjà emprunté");
+		return false;
+		} else {
+			this.disponible = false;
+			return true;
+		}
 	}
 
 	public void retourner() {
-		System.out.println("Vous avez rendu le livre " + this.titre);
 		this.disponible = true;
 	}
-	
+
 	public String getTitre() {
 		return titre;
 	}
@@ -62,9 +67,4 @@ public class Livre implements Empruntable {
 		this.disponible = disponible;
 	}
 
-	
-	
-	
-	
-	
 }
