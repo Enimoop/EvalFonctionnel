@@ -11,7 +11,7 @@ public class Membre extends Personne{
 		this.statut = statut;
 	}
 
-	@Override
+
 	public void afficherDetails() {
 		System.out.println("nom : " + this.nom);
 		System.out.println("prenom : " + this.prenom);
