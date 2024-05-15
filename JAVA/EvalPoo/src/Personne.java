@@ -10,6 +10,7 @@ abstract public class Personne {
 		this.id = id;
 	}
 	
+	
 	abstract public void afficherDetails();
 	
 	public String getNom() {
