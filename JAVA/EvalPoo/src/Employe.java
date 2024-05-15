@@ -1,8 +1,8 @@
 
 public class Employe extends Personne {
 	
-	public String poste;
-	public double salaire;
+	private String poste;
+	private double salaire;
 	
 	public Employe(String nom, String prenom, int id, String poste, double salaire) {
 		super(nom, prenom, id);

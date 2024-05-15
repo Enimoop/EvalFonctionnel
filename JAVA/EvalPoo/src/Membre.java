@@ -3,8 +3,8 @@ import java.util.Date;
 
 public class Membre extends Personne{
 
-	public Date dateAdhesion;
-	public String statut;
+	private Date dateAdhesion;
+	private String statut;
 	
 	public ArrayList<Livre> livres = new ArrayList<>();
 	

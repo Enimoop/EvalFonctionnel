@@ -1,9 +1,9 @@
 
 public class Livre implements Empruntable {
-	public String titre;
-	public String auteur;
-	public String isbn;
-	public boolean disponible;
+	private String titre;
+	private String auteur;
+	private String isbn;
+	private boolean disponible;
 	
 	public Livre(String titre, String auteur, String isbn, boolean disponible) {
 		this.titre = titre;
