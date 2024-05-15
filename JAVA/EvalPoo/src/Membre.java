@@ -23,7 +23,7 @@ public class Membre extends Personne implements Notifiable {
 		System.out.println("statut : " + this.statut);
 		System.out.println();
 	}
-	
+
 	public void afficherListe() {
 		System.out.println("La liste : ");
 		for (Livre livre : livres) {
@@ -32,21 +32,22 @@ public class Membre extends Personne implements Notifiable {
 		}
 	}
 
-	public void emprunter(Livre unLivre) {
+	public boolean emprunter(Livre unLivre) {
 		unLivre.emprunter();
 		System.out.println(this.prenom + " " + this.nom + " Vous avez emprunté le livre " + unLivre.getTitre());
-		livres.add(unLivre);
 		System.out.println();
+		this.afficherListe();
+		return livres.add(unLivre);
+
 	}
 
-	public void retourner(Livre unLivre) {
+	public boolean retourner(Livre unLivre) {
 		unLivre.retourner();
-		livres.remove(unLivre);
+		return livres.remove(unLivre);
 	}
 
 	public void notifierRetour(Livre unLivre) {
 		System.out.println(this.prenom + " " + this.nom + " Vous avez rendu le livre " + unLivre.getTitre());
-		this.retourner(unLivre);
 		System.out.println();
 	}
 

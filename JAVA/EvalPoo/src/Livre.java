@@ -23,16 +23,17 @@ public class Livre implements Empruntable {
 
 	public boolean emprunter() {
 		if (this.disponible == false) {
-		System.out.println("Le livre est déjà emprunté");
-		return false;
+			System.out.println("Le livre est déjà emprunté");
+			return false;
 		} else {
 			this.disponible = false;
 			return true;
 		}
 	}
 
-	public void retourner() {
+	public boolean retourner() {
 		this.disponible = true;
+		return true;
 	}
 
 	public String getTitre() {

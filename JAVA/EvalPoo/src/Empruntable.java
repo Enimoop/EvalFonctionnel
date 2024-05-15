@@ -2,5 +2,5 @@
 public interface Empruntable {
 	abstract public boolean emprunter();
 
-	abstract public void retourner();
+	abstract public boolean retourner();
 }
