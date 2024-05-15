@@ -17,13 +17,16 @@ public class Livre implements Empruntable {
 		System.out.println("Auteur : " + this.auteur);
 		System.out.println("isbn : " + this.isbn);
 		System.out.println("disponible : " + this.disponible);
+		System.out.println();
 	}
 
 	public void emprunter() {
+		System.out.println("Vous avez emprunté le livre " + this.titre);
 		this.disponible = false;
 	}
 
 	public void retourner() {
+		System.out.println("Vous avez rendu le livre " + this.titre);
 		this.disponible = true;
 	}
 	

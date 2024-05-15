@@ -1,9 +1,12 @@
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Membre extends Personne{
 
 	public Date dateAdhesion;
 	public String statut;
+	
+	public ArrayList<Livre> livres = new ArrayList<>();
 	
 	public Membre(String nom, String prenom, int id, Date dateAdhesion, String statut) {
 		super(nom, prenom, id);
@@ -18,6 +21,17 @@ public class Membre extends Personne{
 		System.out.println("id : " + this.id);
 		System.out.println("date adhesion : " + this.dateAdhesion);
 		System.out.println("statut : " + this.statut);
+		System.out.println();
+	}
+	
+	public void emprunter(Livre unLivre) {
+		livres.add(unLivre);
+		unLivre.emprunter();
+	}
+	
+	public void retourner(Livre unLivre) {
+		livres.remove(unLivre);
+		unLivre.retourner();
 	}
 
 
