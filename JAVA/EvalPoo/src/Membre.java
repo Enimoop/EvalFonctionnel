@@ -2,8 +2,8 @@ import java.util.Date;
 
 public class Membre extends Personne{
 
-	protected Date dateAdhesion;
-	protected String statut;
+	public Date dateAdhesion;
+	public String statut;
 	
 	public Membre(String nom, String prenom, int id, Date dateAdhesion, String statut) {
 		super(nom, prenom, id);
@@ -18,6 +18,26 @@ public class Membre extends Personne{
 		System.out.println("id : " + this.id);
 		System.out.println("date adhesion : " + this.dateAdhesion);
 		System.out.println("statut : " + this.statut);
+	}
+
+
+	public Date getDateAdhesion() {
+		return dateAdhesion;
+	}
+
+
+	public void setDateAdhesion(Date dateAdhesion) {
+		this.dateAdhesion = dateAdhesion;
+	}
+
+
+	public String getStatut() {
+		return statut;
+	}
+
+
+	public void setStatut(String statut) {
+		this.statut = statut;
 	}
 	
 	
